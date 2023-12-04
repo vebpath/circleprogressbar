@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+:root{
+    --primaryColor: #00A9FF;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--primaryColor);
+}
+
+main{
+    padding: 40px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(var(--primaryColor),60deg , #EBEBEB 0deg);
+    position: relative;
+}
+
+.circle::after{
+    position: absolute;
+    content: attr(data-percent);
+    display: grid;
+    place-items: center;
+    inset: 12px;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 40px;
+    color: var(--primaryColor);
+    font-weight: bold;
+
+}
